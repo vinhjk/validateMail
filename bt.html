@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function validate(str) {
+        var regexp = /^[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]+$/;
+        if (regexp.test(str)) {
+            console.log("This is email");
+            return true;
+        } else {
+            console.log("Some wrong")
+            return false;
+        }
+    }
+    var mail1 = "a@gmail.com";
+    var mail2 = "ab@yahoo.com";
+    var mail3 = "abc@hotmail.com";
+    var notMail1 = "@gmail.com";
+    var notMail2 = "ab@gmail.";
+    var notMail3 = "@#abc@gmail.com";
+    validate(mail1);
+    validate(mail2);
+    validate(mail3);
+    validate(notMail1);
+    validate(notMail2);
+    validate(notMail3);
+</script>
+</body>
+</html>
